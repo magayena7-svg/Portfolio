@@ -282,11 +282,28 @@
       <textarea name="message" placeholder="Pesan" required></textarea>
       <button type="submit">Kirim Pesan</button>
     </form>
+    <p id="form-success" style="display:none; color:green;">Terima kasih, pesan kamu sudah terkirim!</p>
   </section>
 
   <footer>
     <p>&copy; 2026 Isak Bunai Magai. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          document.getElementById('form-success').style.display = 'block';
+          this.reset();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
