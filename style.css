@@ -609,3 +609,61 @@ section {
         justify-content: center;
     }
 }
+
+/* Contact Section - New Style */
+.contact {
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact > p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact-info p {
+  margin: 5px 0;
+}
+.contact-info a {
+  color: #6366f1;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+}
+form label {
+  font-weight: 500;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button[type="submit"] {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+button[type="submit"]:hover {
+  background: #555;
+}
