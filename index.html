@@ -276,10 +276,10 @@
       <p>📱 Telepon: <a href="tel:+6285756557139">0857 5655 7139</a></p>
       <p>📍 Lokasi: Jayapura, Papua, Indonesia</p>
     </div>
-    <form>
-      <input type="text" placeholder="Nama">
-      <input type="email" placeholder="Email">
-      <textarea rows="5" placeholder="Pesan"></textarea>
+    <form action="https://formspree.io/f/yourFormID" method="POST">
+      <input type="text" name="name" placeholder="Nama" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Pesan" required></textarea>
       <button type="submit">Kirim Pesan</button>
     </form>
   </section>
