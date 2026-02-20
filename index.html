@@ -1,15 +1,196 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Saya</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Isak Bunai Magai</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    /* Navigasi */
+    nav {
+      background: #000;
+      color: #fff;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    nav ul li:hover {
+      color: #ffeb3b;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #000, #444);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      background: #ffeb3b; /* kuning */
+      color: #000;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .hero button:hover {
+      background: #800080; /* ungu */
+      color: #fff;
+    }
+
+    /* Tentang */
+    .about {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .about img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      background: #ccc;
+    }
+
+    /* Skills */
+    .skills {
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+    .skills h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .skills-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .skills-list div {
+      margin: 15px;
+      text-align: center;
+      padding: 10px 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Proyek */
+    .projects {
+      padding: 60px 20px;
+    }
+    .projects h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-card {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .project-card:hover {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Kontak */
+    .contact {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #000000, #ffffff); /* hitam putih */
+      border-radius: 10px;
+      margin: 20px;
+      color: #fff;
+    }
+    .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffeb3b; /* judul kuning */
+    }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact-info p {
+      margin: 5px 0;
+      color: #fff;
+    }
+    .contact-info a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #ffeb3b; /* kuning */
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      display: block;
+      margin: auto;
+    }
+    button:hover {
+      background: #800080; /* ungu */
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-<!-- Hero Section -->
-<section class="hero">
+
+  <!-- Navigasi -->
   <nav>
     <ul>
       <li>Portfolio</li>
@@ -20,184 +201,76 @@
       <li>Kontak</li>
     </ul>
   </nav>
-  <div class="intro">
+
+  <!-- Hero -->
+  <section class="hero">
     <h1>Halo, Saya Isak Bunai Magai</h1>
     <h2>Web Developer & Data Enthusiast</h2>
-    <p>Mahasiswa Semester 6, fokus pada algoritma, pemrograman, statistik, GIS, database, dan web development. 
-       Aktif mengembangkan proyek AI, dashboard, dan portfolio untuk dampak akademik maupun nasional.</p>
     <button>Lihat Proyek</button>
     <button>Hubungi Saya</button>
-  </div>
-</section>
+  </section>
 
-<!-- Tentang Saya -->
-<section class="about">
-  <h2>Tentang Saya</h2>
-  <img src="foto-profil.jpg" alt="Foto Isak Bunai Magai">
-  <h3>Siapa Saya?</h3>
-  <p>Saya adalah seorang pengembang web yang passionate dalam menciptakan pengalaman digital yang menarik dan bermakna. 
-     Dengan pengalaman dalam berbagai proyek, saya selalu berusaha memberikan yang terbaik dalam setiap pekerjaan.</p>
-  <p>Saya senang belajar hal baru dan terus meningkatkan kemampuan saya di dunia teknologi yang terus berkembang.</p>
-  <div class="stats">
-    <div><strong>5</strong><br>Tahun Pengalaman</div>
-    <div><strong>50</strong><br>Proyek Selesai</div>
-    <div><strong>30</strong><br>Klien Puas</div>
-  </div>
-</section>
+  <!-- Tentang -->
+  <section class="about">
+    <h2>Tentang Saya</h2>
+    <img src="foto-profil.jpg" alt="Foto Isak Bunai Magai">
+    <p>Saya adalah seorang pengembang web yang passionate dalam menciptakan pengalaman digital yang menarik dan bermakna. 
+       Mahasiswa Semester 6 dengan fokus pada algoritma, pemrograman, statistik, GIS, database, dan web development.</p>
+  </section>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">&#60;/&#62;</div>
-                    <h3>HTML & CSS</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="90"></div>
-                    </div>
-                    <span class="skill-level">90%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">JS</div>
-                    <h3>JavaScript</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="85"></div>
-                    </div>
-                    <span class="skill-level">85%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F4BB;</div>
-                    <h3>Python</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="80"></div>
-                    </div>
-                    <span class="skill-level">80%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F5C4;</div>
-                    <h3>Database</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="75"></div>
-                    </div>
-                    <span class="skill-level">75%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F3A8;</div>
-                    <h3>UI/UX Design</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="70"></div>
-                    </div>
-                    <span class="skill-level">70%</span>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">&#x1F4E1;</div>
-                    <h3>Git</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-progress="85"></div>
-                    </div>
-                    <span class="skill-level">85%</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Skills -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div>HTML & CSS - 90%</div>
+      <div>JavaScript - 85%</div>
+      <div>Python - 80%</div>
+      <div>Database - 75%</div>
+      <div>UI/UX Design - 70%</div>
+      <div>Git - 85%</div>
+    </div>
+  </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Proyek Saya</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">&#x1F4C1;</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Website E-Commerce</h3>
-                        <p>Platform belanja online dengan fitur keranjang belanja, pembayaran, dan manajemen produk.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="project-link">Lihat Demo →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">&#x1F4C1;</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Aplikasi Todo List</h3>
-                        <p>Aplikasi manajemen tugas dengan fitur prioritas, kategori, dan notifikasi.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>LocalStorage</span>
-                        </div>
-                        <a href="#" class="project-link">Lihat Demo →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">&#x1F4C1;</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Dashboard Admin</h3>
-                        <p>Sistem dashboard untuk memantau metrics dan analitik bisnis secara real-time.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Chart.js</span>
-                            <span>API</span>
-                        </div>
-                        <a href="#" class="project-link">Lihat Demo →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">&#x1F4C1;</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p>Website portfolio responsif dengan desain modern dan animasi menarik.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="project-link">Lihat Demo →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Proyek -->
+  <section class="projects">
+    <h2>Proyek Saya</h2>
+    <div class="project-card">
+      <h3>Website E-Commerce</h3>
+      <p>Platform belanja online dengan fitur keranjang belanja, pembayaran, dan manajemen produk.</p>
+    </div>
+    <div class="project-card">
+      <h3>Aplikasi Todo List</h3>
+      <p>Aplikasi manajemen tugas dengan fitur prioritas, kategori, dan notifikasi.</p>
+    </div>
+    <div class="project-card">
+      <h3>Dashboard Admin</h3>
+      <p>Sistem dashboard untuk memantau metrics dan analitik bisnis secara real-time.</p>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Website portfolio responsif dengan desain modern dan animasi menarik.</p>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-        <h2>Hubungi Saya</h2>
-        <p>Mari Berdiskusi! Apakah Anda memiliki proyek menarik? Mari kita diskusikan!</p>
-        
-        <div class="contact-info">
-            <p>✉ Email: <a href="mailto:magayena7@gmail.com">magayena7@gmail.com</a></p>
-            <p>📱 Telepon: <a href="tel:+6285756557139">0857 5655 7139</a></p>
-            <p>📍 Lokasi: Jayapura, Papua, Indonesia</p>
-        </div>
+  <!-- Kontak -->
+  <section class="contact">
+    <h2>Hubungi Saya</h2>
+    <div class="contact-info">
+      <p>✉ Email: <a href="mailto:magayena7@gmail.com">magayena7@gmail.com</a></p>
+      <p>📱 Telepon: <a href="tel:+6285756557139">0857 5655 7139</a></p>
+      <p>📍 Lokasi: Jayapura, Papua, Indonesia</p>
+    </div>
+    <form>
+      <input type="text" placeholder="Nama">
+      <input type="email" placeholder="Email">
+      <textarea rows="5" placeholder="Pesan"></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
 
-        <form>
-            <label for="name">Nama</label><br>
-            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda"><br><br>
+  <footer>
+    <p>&copy; 2026 Isak Bunai Magai. All rights reserved.</p>
+  </footer>
 
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" placeholder="Masukkan email Anda"><br><br>
-
-            <label for="message">Pesan</label><br>
-            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda"></textarea><br><br>
-
-            <button type="submit">Kirim Pesan</button>
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Portfolio Saya. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
