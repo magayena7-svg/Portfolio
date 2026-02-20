@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slideshow Foto</title>
+  <style>
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 1s ease;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slides img.active {
+      opacity: 1;
+    }
+    .navigation {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .prev, .next {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow">
+    <div class="slides" id="slides">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+    </div>
+    <div class="navigation">
+      <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+      <span class="next" onclick="moveSlide(1)">&#10095;</span>
+    </div>
+    <div class="dots">
+      <span onclick="goToSlide(0)">●</span>
+      <span onclick="goToSlide(1)">●</span>
+      <span onclick="goToSlide(2)">●</span>
+    </div>
+  </div>
+
+  <style>
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dots span {
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px;
+      color: gray;
+    }
+    .dots span.active {
+      color: black;
+    }
+  </style>
+
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slides img");
+    const dots = document.querySelectorAll(".dots span");
+    const total = slides.length;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      dots.forEach(dot => dot.classList.remove("active"));
+      slides[i].classList.add("active");
+      dots[i].classList.add("active");
+    }
+
+    function moveSlide(step) {
+      index = (index + step + total) % total;
+      showSlide(index);
+    }
+
+    function goToSlide(n) {
+      index = n;
+      showSlide(index);
+    }
+
+    // Tampilkan slide pertama
+    showSlide(0);
+
+    // otomatis jalan setiap 4 detik
+    setInterval(() => moveSlide(1), 4000);
+  </script>
+</body>
+</html>
